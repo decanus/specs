@@ -67,7 +67,9 @@ Protocol multiplexing is done through [`multistream`](https://github.com/jbenet/
 
 ### 4.2.5 Identify
 
-**Identify** is one of the protocols mounted on top of Swarm, our Connection handler. However, it follows and respects the same pattern as any other protocol when it comes to mounting it on top of Swarm. Identify enables us to trade listened addresses and observed addresses between peers, which is crucial for the working of libp2p. Since every socket open implements `REUSEPORT`, an address observed by another peer can enable a third peer to connect to us, since the port will be already open and redirect to us on a NAT.
+**Identify** is one of the protocols mounted on top of Swarm, our Connection handler. However, it follows and respects the same pattern as any other protocol when it comes to mounting it on top of Swarm.
+
+Identify enables us to trade listened addresses and observed addresses between peers. This serves a crucial role in detecting the presence of a NAT and can aid in traversal of some full-cone NAT implementations.
 
 ### 4.2.6 Relay
 
