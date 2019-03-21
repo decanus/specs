@@ -41,6 +41,10 @@ The circuit relay is both a tunneled transport and a mounted swarm protocol. The
      +-----------------------------------------+     +-----------------------------------------+
 ```
 
+**Notes for the reader:**
+
+ - We're using the `/p2p` multiaddr protocol instead of `/ipfs` in this document. `/p2p` is the new string representation for the libp2p multiaddr protocol, replacing `/ipfs`. The two have the same binary representation for backwards compatibility. While the migration is ongoing, you may see either "in the wild," depending on the version of the multiaddr implementaion in use.
+
 ## Dramatization
 
 Cast:
