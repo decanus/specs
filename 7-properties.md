@@ -103,10 +103,9 @@ We have the **hard constraint** of making libp2p work across _any_ duplex stream
 
 To make this work, libp2p has to solve a few problems:
 
-- [Protocol Multiplexing](#751-protocol-multiplexing) - running multiple protocols over the same stream
-  - [multistream](#752-multistream---self-describing-protocol-stream) - self-describing protocol streams
+- [Stream Multiplexing](#751-stream-multiplexing) - running many independent streams over the same wire
+- Protocol Multiplexing - running multiple protocols over the same stream
   - [multistream-select](#753-multistream-selector---self-describing-protocol-stream-selector) - a self-describing protocol selector
-  - [Stream Multiplexing](#754-stream-multiplexing) - running many independent streams over the same wire
 - [Portable Encodings](#755-portable-encodings) - using portable serialization formats
 - [Secure Communications](#756-secure-communications) - using ciphersuites to establish security and privacy (like TLS)
 
